@@ -1,0 +1,67 @@
+# Test Cases for ClassLab12_Nemnenko
+
+# Test Case 1: Конструктор - Валідні початкові значення
+Test Case ID: TC_001_CTOR_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko з length=10.0, width=5.0
+Expected Result: Об'єкт успішно створено. getLength() повертає 10.0. getWidth() повертає 5.0. calculateArea() повертає 50.0.
+Test Result:
+
+# Test Case 2: Конструктор - Некоректні початкові значення (довжина 0)
+Test Case ID: TC_002_CTOR_INVALID_LENGTH
+Action: Створити об'єкт ClassLab12_Nemnenko з length=0.0, width=5.0
+Expected Result: Виведено попередження про некоректну довжину. getLength() повертає 1.0 (за замовчуванням). getWidth() повертає 5.0. calculateArea() повертає 5.0.
+Test Result:
+
+# Test Case 3: Конструктор - Некоректні початкові значення (ширина від'ємна)
+Test Case ID: TC_003_CTOR_INVALID_WIDTH
+Action: Створити об'єкт ClassLab12_Nemnenko з length=10.0, width=-2.0
+Expected Result: Виведено попередження про некоректну ширину. getLength() повертає 10.0. getWidth() повертає 1.0 (за замовчуванням). calculateArea() повертає 10.0.
+Test Result:
+
+# Test Case 4: getLength() - Отримання валідної довжини
+Test Case ID: TC_004_GET_LENGTH_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko(7.0, 3.0). Викликати getLength().
+Expected Result: Повертає 7.0.
+Test Result:
+
+# Test Case 5: getWidth() - Отримання валідної ширини
+Test Case ID: TC_005_GET_WIDTH_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko(7.0, 3.0). Викликати getWidth().
+Expected Result: Повертає 3.0.
+Test Result:
+
+# Test Case 6: setLength() - Встановлення валідної довжини
+Test Case ID: TC_006_SET_LENGTH_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko(1.0, 1.0). Викликати setLength(15.0).
+Expected Result: Метод повертає true. getLength() повертає 15.0.
+Test Result:
+
+# Test Case 7: setLength() - Спроба встановити некоректну довжину (від'ємна)
+Test Case ID: TC_007_SET_LENGTH_INVALID_NEGATIVE
+Action: Створити об'єкт ClassLab12_Nemnenko(10.0, 5.0). Викликати setLength(-3.0).
+Expected Result: Метод повертає false. Виведено повідомлення про помилку. getLength() залишається 10.0.
+Test Result:
+
+# Test Case 8: setWidth() - Встановлення валідної ширини
+Test Case ID: TC_008_SET_WIDTH_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko(1.0, 1.0). Викликати setWidth(8.0).
+Expected Result: Метод повертає true. getWidth() повертає 8.0.
+Test Result:
+
+# Test Case 9: setWidth() - Спроба встановити некоректну ширину (нуль)
+Test Case ID: TC_009_SET_WIDTH_INVALID_ZERO
+Action: Створити об'єкт ClassLab12_Nemnenko(10.0, 5.0). Викликати setWidth(0.0).
+Expected Result: Метод повертає false. Виведено повідомлення про помилку. getWidth() залишається 5.0.
+Test Result:
+
+# Test Case 10: calculateArea() - Обчислення площі для валідних значень
+Test Case ID: TC_010_CALC_AREA_VALID
+Action: Створити об'єкт ClassLab12_Nemnenko(10.0, 5.0). Викликати calculateArea().
+Expected Result: Повертає 50.0.
+Test Result:
+
+# Test Case 11: calculateArea() - Обчислення площі після зміни розмірів
+Test Case ID: TC_011_CALC_AREA_AFTER_SET
+Action: Створити об'єкт ClassLab12_Nemnenko(10.0, 5.0). Встановити length=20.0, width=2.0. Викликати calculateArea().
+Expected Result: Повертає 40.0.
+Test Result:
